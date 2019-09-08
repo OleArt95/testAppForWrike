@@ -21,7 +21,7 @@ public class WrikeSeleniumTest {
         driver.get("https://www.wrike.com/");
 
         clickOnGetStartedForFreeBtn(driver);
-        typeEmailValueInEmailField(driver);
+        setTextInEmailField(driver);
         clickOnCreateMyWrikeAccountBtn(driver);
         clickOnRandomAnswerInFirstQuestion(driver);
         clickOnRandomAnswerInSecondQuestion(driver);
@@ -36,9 +36,10 @@ public class WrikeSeleniumTest {
         btnGetStatedForFree.click();
     }
 
-    private void typeEmailValueInEmailField(WebDriver driver) {
+    private void setTextInEmailField(WebDriver driver) {
         WebElement fieldEmailValue = driver.findElement(By.xpath("//*[@id=\"modal-pro\"]/form/label[1]/input"));
 
+        //Генерирование строки для создания произвольного email имени
         String generatedEmailName = RandomStringUtils.randomAlphanumeric(10);
         fieldEmailValue.sendKeys(generatedEmailName + "wpt@wriketask.qaa");
     }
