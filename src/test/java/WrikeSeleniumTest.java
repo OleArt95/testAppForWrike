@@ -91,7 +91,7 @@ public class WrikeSeleniumTest {
 
     private void checkTwitterBtnInFooter(WebDriver driver) {
         WebElement btnTwitter = driver.findElement(By.xpath("//div[3]/div/div[1]/div/ul/li[1]"));
-        Assert.assertTrue(btnTwitter.isDisplayed()); //Проверка того, что кнопка Twitter в Follow Us отображается
+        Assert.assertTrue(btnTwitter.isDisplayed()); //Проверка того, что кнопка Twitter отображается в Follow Us
 
 //        String twitterLink = driver.findElement(By.xpath("/html/body/div[1]/div/div[3]/div/div[1]/div/ul/li[1]/a")).getText();
 //        Assert.assertEquals("https://twitter.com/wrike", twitterLink);
