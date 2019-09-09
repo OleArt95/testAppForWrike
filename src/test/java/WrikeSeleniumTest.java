@@ -26,7 +26,7 @@ public class WrikeSeleniumTest {
         clickOnRandomAnswerInFirstQuestion(driver);
         clickOnRandomAnswerInSecondQuestion(driver);
         clickOnRandomAnswerInThirdQuestion(driver);
-        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS); //Ожидание в 5 секунд для завершения отправки результатов
+        driver.manage().timeouts().implicitlyWait(6, TimeUnit.SECONDS); //Ожидание в 6 секунд для завершения отправки результатов
         clickOnSubmitResultsBtn(driver);
         checkTwitterBtnInFooter(driver);
     }
@@ -94,9 +94,6 @@ public class WrikeSeleniumTest {
         Assert.assertTrue(btnTwitter.isDisplayed()); //Проверка того, что кнопка Twitter в Follow Us отображается
 
 //        String twitterLink = driver.findElement(By.xpath("/html/body/div[1]/div/div[3]/div/div[1]/div/ul/li[1]/a")).getText();
-//        Assert.assertTrue(twitterLink.contains("https://twitter.com/wrike"));
-
-//        WebElement twitterIcon = driver.findElement(By.xpath("/html/body/div[1]/div/div[3]/div/div[1]/div/ul/li[1]/a/svg"));
-//        Assert.assertTrue(twitterIcon.isDisplayed());
+//        Assert.assertEquals("https://twitter.com/wrike", twitterLink);
     }
 }
