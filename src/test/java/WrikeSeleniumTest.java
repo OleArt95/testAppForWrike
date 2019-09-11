@@ -78,7 +78,7 @@ public class WrikeSeleniumTest {
     }
 
     private void clickOnSubmitResultsBtn(WebDriver driver) {
-        WebElement btnSubmitResults = driver.findElement(By.xpath("//div[2]/div/div[2]/div/form/button"));
+        WebElement btnSubmitResults = driver.findElement(By.xpath("//*[@class='submit wg-btn wg-btn--navy js-survey-submit']"));
         btnSubmitResults.click();
 
         //Метод явного ожидания того, что кнопка "Submit Results" невидима. Он нужен для дальнейшего выполнения теста
